@@ -85,7 +85,7 @@ if (stargazer_opt == "html"){
 }
 
 # set the seed for replicability
-set.seed(2023)
+set.seed(2024)
 ```
 
 # 1. Multivariate Regression: Statistical Control
@@ -112,7 +112,7 @@ Let's estimate **effect of approval** while controlling for growth (i.e., holdin
 
 2. Regress **approval** on **growth**, store residuals **R2**. 
 
-3. Regress resiudals **R1** on residuals **R2**. 
+3. Regress residuals **R1** on residuals **R2**. 
 
 It is helpful to think of statistical control as Venn Diagrams. Each circle represents the variance of the variable, and the intersection of the circles is the covariance of the two variables, i.e. the part of variance in one variable that can be explained by the variance of another variable. 
 
@@ -705,7 +705,7 @@ Luckily, this is simulated data. So let's have a look at the population to bette
 Perhaps, it is helpful to look at a scatterplot. Due to the scale of our variables, we can use jitter on both `x` and `y` to create a scatterplot that somewhat resembles a heatmap.
 
 ```{r 2-3-sample-from-population}
-set.seed(2023)
+set.seed(2024)
 
 # create sample from population with same size as poll sample
 random_sample <- population[sample(1:nrow(population), nrow(poll)),]
